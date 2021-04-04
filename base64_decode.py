@@ -13,7 +13,7 @@ msg_to_decode = input('Decode this : ')
 
 binary_string = ""
 for char in msg_to_decode:
-    if char == '=':  # '=' indicate two binary 0s
+    if char == '=':  # '=' indicates two binary 0s
         binary_string += '00'
     else:  # Unpack regular chars as 6 bits
         binary_string += bin(base64_array.index(char))[2:].rjust(6, '0')
