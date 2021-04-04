@@ -16,9 +16,9 @@ binary_string = ""
 for char in msg_to_encode:
     binary_string += bin(ord(char))[2:].rjust(8, '0')
 
-# Regular encoding of 6-bits packages
+# Regular encoding of 6-bits chunks
 encoded = ""
-for i in range(0, len(binary_string), 6):  # Index goes up by 6 each time
+for i in range(0, len(binary_string), 6):  # Index goes up by 6 every time
     encoded += base64_array[int(binary_string[i:i+6], 2)]
 
 # Handle remaining bits
